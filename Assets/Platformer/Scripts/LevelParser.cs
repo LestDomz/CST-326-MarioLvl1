@@ -79,36 +79,6 @@ public class LevelParser : MonoBehaviour
 
             for (int col = 0; col < letters.Length; ++col)
             {
-                /*GameObject blockPrefab = null;
-
-                // Determine which block to instantiate based on character
-                switch (letters[col])
-                {
-                    case 'R':
-                        blockPrefab = rockPrefab;
-                        break;
-                    case 'B':
-                        blockPrefab = brickPrefab;
-                        break;
-                    case '?':
-                        blockPrefab = questionBoxPrefab;
-                        break;
-                    case 'S':
-                        blockPrefab = stonePrefab;
-                        break;
-                    default:
-                        continue; // Skip empty spaces or unrecognized characters
-                }
-
-                // Instantiate the block at the calculated position
-                if (blockPrefab != null)
-                {
-                    Vector3 position = new Vector3(col, row, 0); // Adjust Z if necessary
-                    GameObject newBlock = Instantiate(blockPrefab, position, Quaternion.identity);
-
-                    // Parent the block under environmentRoot for organization
-                    newBlock.transform.parent = environmentRoot;
-                }*/
                 if (letters[col] == 'x')
                 {
                     Vector3 pos = new Vector3(col + 0.5f, row + 0.5f, 0);
@@ -134,7 +104,7 @@ public class LevelParser : MonoBehaviour
                     newObj.transform.position = pos;
                 }
             }
-            row++; // Move up to the next row
+            row++;
         }
     }
 
